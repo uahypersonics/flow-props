@@ -1,0 +1,105 @@
+# BSD-3-Clause License - see LICENSE file
+
+# --------------------------------------------------
+# site metadata
+# --------------------------------------------------
+site_name: flow_props
+site_url: https://uahypersonics.github.io/flow-props
+site_author: Christoph Hader
+site_description: Extract flow properties from CFD data.
+
+# --------------------------------------------------
+# github repository (adds link in top right corner)
+# --------------------------------------------------
+repo_name: uahypersonics/flow-props
+repo_url: https://github.com/uahypersonics/flow-props
+edit_uri: edit/main/docs/
+
+# --------------------------------------------------
+# theme configuration
+# --------------------------------------------------
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: blue grey
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: blue grey
+      toggle:
+        icon: material/weather-night
+        name: Switch to system preference
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - content.action.view
+
+# --------------------------------------------------
+# plugins
+# --------------------------------------------------
+plugins:
+  - search
+
+# --------------------------------------------------
+# markdown extensions
+# --------------------------------------------------
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - tables
+  - attr_list
+  - md_in_html
+  - footnotes
+
+# --------------------------------------------------
+# javascript for MathJax
+# --------------------------------------------------
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# --------------------------------------------------
+# navigation
+# --------------------------------------------------
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - User Guide:
+    - user-guide/index.md
+    - Basic Usage: user-guide/basic-usage.md
+  - Theory:
+    - theory/index.md
+  - API Reference:
+    - api/index.md
+  - Examples: examples.md
+  - Nomenclature: nomenclature.md
