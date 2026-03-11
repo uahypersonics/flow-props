@@ -36,3 +36,11 @@ Repository = "https://github.com/uahypersonics/flow-props"
 where = ["src"]
 
 [tool.setuptools_scm]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP"]
+ignore = ["E501"]
