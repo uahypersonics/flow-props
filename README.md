@@ -23,8 +23,7 @@ import flow_props
 
 ## Features
 
-- **Boundary layer thickness** extraction from CFD solutions
-- **Entropy layer thickness** detection and measurement
+- under construction
 
 ## Documentation
 
@@ -56,7 +55,7 @@ To publish a new version to [PyPI](https://pypi.org/project/flow-props/):
 1. Commit and push to `main`
 2. Tag and push:
    ```bash
-   git tag vMAJOR.MINOR.PATCH
+   git tag -a vMAJOR.MINOR.PATCH -m "Release vMAJOR.MINOR.PATCH"
    git push origin vMAJOR.MINOR.PATCH
    ```
 
