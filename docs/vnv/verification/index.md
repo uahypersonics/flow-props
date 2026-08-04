@@ -1,5 +1,5 @@
-# Theory
+# Verification
 
 !!! warning "Under Construction"
 
-	Placeholder.
+    Placeholder.

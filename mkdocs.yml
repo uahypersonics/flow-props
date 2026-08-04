@@ -20,6 +20,7 @@ edit_uri: edit/main/docs/
 # --------------------------------------------------
 theme:
   name: material
+  # color palette with 3-way toggle: auto (system), light, dark
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -39,6 +40,7 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to system preference
+  # navigation and UI features
   features:
     - navigation.tabs
     - navigation.sections
@@ -89,17 +91,37 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 # --------------------------------------------------
-# navigation
+# navigation structure for the documentation
 # --------------------------------------------------
 nav:
   - Home: index.md
   - Installation: installation.md
   - User Guide:
     - user-guide/index.md
+    - Workflow: user-guide/workflow.md
+    - Configuration:
+      - Overview: user-guide/configuration.md
+      - Config Files: user-guide/config-files.md
+      - Output Formats: user-guide/output.md
     - Basic Usage: user-guide/basic-usage.md
+    - CLI: user-guide/cli.md
   - Theory:
     - theory/index.md
+    - Boundary-Layer Quantities: theory/boundary-layer.md
+    - Entropy Layer: theory/entropy-layer.md
+    - Wall Quantities: theory/wall-quantities.md
+  - CLI Reference:
+    - cli-reference/index.md
   - API Reference:
     - api/index.md
+    - Architecture: api/architecture.md
+    - Profiles: api/profiles.md
+    - Boundary Layer: api/boundary-layer.md
+    - Entropy Layer: api/entropy-layer.md
+    - Wall Quantities: api/wall.md
+  - Validation and Verification:
+    - vnv/index.md
+    - Verification: vnv/verification/index.md
+    - Validation: vnv/validation/index.md
   - Examples: examples.md
   - Nomenclature: nomenclature.md

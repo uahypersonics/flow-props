@@ -26,7 +26,21 @@ keywords = ["boundary-layer", "entropy-layer", "cfd", "flow-properties", "aerody
 
 dependencies = [
     "numpy>=1.24.0",
+    "cfd-io>=0.2.0",
+    "typer>=0.9.0",
+    "pydantic>=2.0",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.6.0",
+    "zensical",
+]
+
+[project.scripts]
+flow-props = "flow_props.cli.app:app"
 
 [project.urls]
 Homepage = "https://github.com/uahypersonics/flow-props"
@@ -34,6 +48,9 @@ Repository = "https://github.com/uahypersonics/flow-props"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+flow_props = ["examples/*.toml"]
 
 [tool.setuptools_scm]
 

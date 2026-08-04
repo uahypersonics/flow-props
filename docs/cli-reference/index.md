@@ -1,5 +1,5 @@
-# Theory
+# CLI Reference
 
 !!! warning "Under Construction"
 
-	Placeholder.
+    Placeholder.

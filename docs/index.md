@@ -1,10 +1,49 @@
 # flow_props
 
-Python tool suite to extract flow properties from CFD data, such as boundary layer thickness and entropy layer thickness.
+`flow_props` extracts physically meaningful boundary-layer and wall quantities from structured CFD datasets.
 
-## Install
+## Quick Start
+
+### Install
 
 ```bash
 pip install flow-props
 ```
+
+### Run
+
+=== "CLI"
+
+	```bash
+	flow-props init --bl
+	flow-props run --bl
+	```
+
+=== "API"
+
+	```python
+	import cfd_io
+	from flow_props import run_bl
+
+	dataset = cfd_io.read_file("solution.vtu")
+	results = run_bl(dataset, stations=[10, 50, 100])
+
+	print(results[0])
+	```
+
+## Feedback & Contributing
+
+Questions, bug reports, and contributions are welcome. If something unexpected
+comes up while using this package, or there are ideas for improvement, opening
+an issue or starting a discussion is the best first step.
+
+Using a label when opening an issue helps prioritize and track requests:
+
+- [Ask a question](https://github.com/uahypersonics/flow-props/issues/new?labels=question)
+- [Report a bug](https://github.com/uahypersonics/flow-props/issues/new?labels=bug)
+- [Suggest a feature](https://github.com/uahypersonics/flow-props/issues/new?labels=enhancement)
+
+## License
+
+BSD-3-Clause. See [LICENSE](https://github.com/uahypersonics/flow-props/blob/main/LICENSE) for details.
 
