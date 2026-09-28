@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+import builtins
 import tomllib
 from pathlib import Path
-from typing import List, Literal
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
@@ -25,10 +26,10 @@ class StationsConfig(BaseModel):
     di: int | None = Field(default=None, gt=0, description="Step in i")
 
     # -- mode 3: explicit list --
-    list: List[int] | None = Field(default=None, description="Explicit i-station list")
+    list: builtins.list[int] | None = Field(default=None, description="Explicit i-station list")
 
     @model_validator(mode="after")
-    def _check_exactly_one_mode(self) -> "StationsConfig":
+    def _check_exactly_one_mode(self) -> StationsConfig:
         """Validate that exactly one selection mode is fully specified."""
         # check which modes are (at least partially) filled
         mode1 = any(v is not None for v in [self.x_s, self.x_e, self.dx])

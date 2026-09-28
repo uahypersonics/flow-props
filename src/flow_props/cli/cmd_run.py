@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Optional
 
 import typer
 
@@ -14,7 +13,7 @@ def cmd_run(
         "--bl",
         help="Run BL extraction only; default config is bl.toml.",
     ),
-    config: Optional[Path] = typer.Argument(
+    config: Path | None = typer.Argument(
         None,
         help="Path to TOML config file.  Defaults to bl.toml (--bl) or flow_props.toml.",
     ),
