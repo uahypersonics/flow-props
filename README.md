@@ -5,7 +5,7 @@ Python tool suite to extract flow properties from CFD data, such as boundary lay
 [![Test](https://github.com/uahypersonics/flow-props/actions/workflows/test.yml/badge.svg)](https://github.com/uahypersonics/flow-props/actions/workflows/test.yml)
 [![PyPI](https://img.shields.io/pypi/v/flow-props)](https://pypi.org/project/flow-props/)
 [![Docs](https://img.shields.io/badge/docs-zensical-blue)](https://uahypersonics.github.io/flow-props/)
-[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-≥3.11-blue.svg)](https://www.python.org/downloads/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
@@ -63,4 +63,5 @@ The GitHub Actions workflow will automatically build and publish to PyPI via Tru
 
 ## License
 
-BSD-3-Clause. See [LICENSE](LICENSE) for details.
+GNU General Public License v3.0 or later. See [LICENSE](LICENSE) for the
+complete license terms.
